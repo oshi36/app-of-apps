@@ -19,11 +19,11 @@ spec:
           persistence:
             enabled: true
             size: 5Gi
-          metrics:
+        metrics:
+          enabled: true
+          serviceMonitor:
             enabled: true
-            serviceMonitor:
-              enabled: true
-              interval: 30s   
+            interval: 30s   
   destination:
     server: https://kubernetes.default.svc
     namespace: postgresql
